@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SortManagerApp\SortManagerApp.csproj" />
+    <ProjectReference Include="..\SortManagerController\SortManagerController.csproj" />
+    <ProjectReference Include="..\SortManagerModel\SortManagerModel.csproj" />
   </ItemGroup>
 
 </Project>
