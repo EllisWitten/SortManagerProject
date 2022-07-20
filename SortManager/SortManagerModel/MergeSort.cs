@@ -18,14 +18,14 @@ public class MergeSort
         int[] lResult = MergeSortRecursive(left);
         int[] rResult = MergeSortRecursive(right);
 
-        int[] finalResult = input;
+        int[] finalResult = MergeSortedArrays(lResult, rResult);
 
         return finalResult;
     }
 
     public static int[] MergeSortedArrays(int[] arrayOne, int[] arrayTwo)
     {
-        // JOIN THESE TWO ARRAYS INTO
+        // JOIN THESE TWO ARRAYS INTO ONE
         return new int[] { -1 };
     }
 }
