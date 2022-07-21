@@ -2,9 +2,9 @@
 
 namespace SortManagerModel
 {
-    public class MergeSort : Sorter
+    public class MergeSort : ISort
     {
-        public override int[] Sort(int[] inputArray)
+        public int[] Sort(int[] inputArray)
         {
             if (inputArray.Length <= 0)
             {
