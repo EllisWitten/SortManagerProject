@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using SortManagerModel;
 namespace SortManagerController
 {
-    public enum Algorithms { MERGESORT }
+    public enum registeredSortMethods { MERGESORT }
     public class Controller : ISort
     {
-        public Algorithms Algorithm { get; set; }
+        public registeredSortMethods selectedSortMethod { get; set; }
 
         public Controller(string sortMethod)
         {
             switch (sortMethod.ToLower())
             {
                 case "mergesort":
-                    Algorithm = Algorithms.MERGESORT;
+                    selectedSortMethod = registeredSortMethods.MERGESORT;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException("Sort algorithm is unrecognised");
@@ -26,14 +25,8 @@ namespace SortManagerController
 
         public int[] Sort(int[] input)
         {
-            switch (Algorithm)
-            {
-                case Algorithms.MERGESORT:
-                    var _sorter = new MergeSort();
-                    return _sorter.Sort(input);
-                default:
-                    break;
-            }
+            var _sorter = SortFactory.GetInstance(selectedSortMethod);
+            return _sorter.Sort(input);
         }
     }
 }
