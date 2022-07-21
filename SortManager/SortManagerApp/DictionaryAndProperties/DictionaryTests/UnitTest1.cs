@@ -3,8 +3,9 @@ using DictionaryAndProperties;
 
 public class Tests
 {
-    [Test]
-    public void AssertThatWhenGivenAString_StringToDictionary_RetrunsExpectedResult()
-    {
-       
-    }
+    //[Test]
+    //public void AssertThatWhenGivenAString_StringToDictionary_RetrunsExpectedResult()
+    //{
+
+    //}
+}
