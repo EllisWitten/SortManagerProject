@@ -16,4 +16,10 @@
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SortManagerApp\SortManagerApp.csproj" />
+    <ProjectReference Include="..\SortManagerController\SortManagerController.csproj" />
+    <ProjectReference Include="..\SortManagerModel\SortManagerModel.csproj" />
+  </ItemGroup>
+
 </Project>
