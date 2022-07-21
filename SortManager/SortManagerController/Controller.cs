@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Diagnostics;
+
 namespace SortManagerController
 {
     public enum registeredSortMethods { MERGESORT }
@@ -25,8 +27,14 @@ namespace SortManagerController
 
         public int[] Sort(int[] input)
         {
+            Stopwatch executionTime = new Stopwatch();
             var _sorter = SortFactory.GetInstance(selectedSortMethod);
-            return _sorter.Sort(input);
+            executionTime.Start();
+            var sortedArray = _sorter.Sort(input);
+            executionTime.Stop();
+            var timeToSort = executionTime.ElapsedMilliseconds;
+            // Call a method in View to display the elapsed time
+            return sortedArray;
         }
     }
 }

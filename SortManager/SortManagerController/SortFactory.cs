@@ -14,7 +14,7 @@ namespace SortManagerController
             switch (selectedSortMethod)
             {
                 case registeredSortMethods.MERGESORT:
-                    return new MergeSort();
+                    return (ISort) new MergeSort();
                 default:
                     return null;
             }
