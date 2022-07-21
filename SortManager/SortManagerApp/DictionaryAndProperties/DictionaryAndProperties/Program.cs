@@ -13,7 +13,11 @@ public class Program
 
         // Factorial.Factorise(5);
 
-        MergeSort.ArrSetUp();
+        // MergeSort.ArrSetUp();
+
+        int[] array = View.GetArr();
+        int method = View.GetMethod();
+        int[] sortedArr = View.RunMethod(array, method);
 
     }
 }
