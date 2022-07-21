@@ -5,6 +5,7 @@ namespace SortManagerTests
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Test]
