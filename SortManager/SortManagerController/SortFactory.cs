@@ -14,9 +14,9 @@ namespace SortManagerController
             switch (selectedSortMethod)
             {
                 case registeredSortMethods.MERGESORT:
-                    return (ISort) new MergeSort();
+                    return new MergeSort();
                 default:
-                    return null;
+                    throw new ArgumentOutOfRangeException("Selected sort algorithm not registered");
             }
         }
     }

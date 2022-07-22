@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using SortManagerController;
 namespace SortManagerApp
 {
     public class View
@@ -20,7 +20,7 @@ namespace SortManagerApp
                 string strInput = Console.ReadLine();
 
                 string[] strArray = strInput.Split(',');
-                int[] intArray = Array.ConvertAll(strArray,s => int.Parse(s));
+                int[] intArray = Array.ConvertAll(strArray, s => int.Parse(s));
 
                 return intArray;
             }
@@ -39,7 +39,9 @@ namespace SortManagerApp
         public static int[] RunMethod(int[] array, int method)
         {
             Controller _controller = new Controller("mergesort");
-            int[] result = _controller.Sort(input);
+            int[] result = _controller.Sort(array);
+            Console.WriteLine("Sorted Array");
+            Console.WriteLine(string.Join(",", result));
             return result;
         }
 
@@ -52,16 +54,18 @@ namespace SortManagerApp
             {
                 array[i] = r.Next(1, 101);
             }
+            Console.WriteLine("Initial Array");
+            Console.WriteLine(string.Join(",", array));
             return array;
         }
 
         public static int GetMethod()
         {
             Console.WriteLine("Select your method by inputting a number");
-            Console.WriteLine("1) Method1\n2) Method2 3)\nMethod3");
+            Console.WriteLine("1) Merge Sort \n2) Method2 \n3) Method3");
             int method = Convert.ToInt32(Console.ReadLine());
 
-            if(method > 0 && method <= 3)
+            if (method > 0 && method <= 3)
             {
                 return method;
             }
