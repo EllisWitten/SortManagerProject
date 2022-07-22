@@ -12,9 +12,6 @@
 //        }*/
 
 //        // Factorial.Factorise(5);
-
-//        MergeSort.ArrSetUp();
-
 //    }
 //}
 

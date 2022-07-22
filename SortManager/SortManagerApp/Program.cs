@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int[] array = View.GetArr();
+            int method = View.GetMethod();
+            int[] sortedArr = View.RunMethod(array, method);
+            //Console.WriteLine("Hello, World!");
         }
     }
 }
